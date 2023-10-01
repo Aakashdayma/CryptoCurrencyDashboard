@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.active {
+  background-color: #2864ab;
+  border-color: #2864ab; /*#3274c6*/
+  color: #ffffff;
+}
+.Name{
+  font-size: 50px;
+  font-weight: 900;
+  background-image: url('https://media.istockphoto.com/id/1438235060/photo/global-communication.jpg?s=1024x1024&w=is&k=20&c=VQB8Yws7WKdN1pEdybwKthbjcozriV8S4eoUuODHPVs=');
+
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(10px 10px 20px blue);
+
+}
+.Name::selection{
+  color: yellow;
+  background-color: black;
+}
+.box:hover h1{
+  scale: 1.2;
+}
