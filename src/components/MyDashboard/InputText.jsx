@@ -1,17 +1,16 @@
 import React from "react";
-
-function InputField({
+function InputText({
   name,
   value,
-  placeholder = "Exchanged value",
-  func = () => {},
+  placeholder ="Exchanged value",
+  funct = () => {},
   disabled = false,
 }) {
   return (
     <div className="relative flex w-full flex-wrap items-stretch">
       <input
         type="number"
-        className={`relative m-3 block w-[1px] min-w-0 flex-auto rounded-md border border-gray-400 ${
+        className={`relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid ${
           disabled === true
             ? "border-neutral-300 bg-neutral-300"
             : "border-neutral-300 bg-transparent"
@@ -23,10 +22,10 @@ function InputField({
         disabled={disabled}
         placeholder={placeholder}
         value={value}
-        onChange={(e) => func(e.target.value)}
+        onChange={(e) => funct(e.target.value)}
       />
     </div>
   );
 }
 
-export default InputField;
+export default InputText;

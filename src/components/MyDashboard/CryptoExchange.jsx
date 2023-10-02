@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DropdownButton from "./DropdownButton";
 import { useDispatch, useSelector } from "react-redux";
 import { updateSelectBuyCrypto, updateSelectSellCrypto } from "../../reduxStore/cryptoCoinData";
-import InputField from "./InputField";
+import InputText from "./InputText";
 
 function CryptoExchange() {
   const [SellItem, setSellItem] = useState(0);
@@ -45,8 +45,8 @@ function CryptoExchange() {
           </div>
           <div className="mt-5 lg:mt-0">
             
-            <InputField
-              name={"Enteramount"}
+          <InputText
+              name={"Enter amount"}
               placeholder={"     Enter value"}
               funct={handleOnChangeSellItem}
             />
@@ -64,7 +64,7 @@ function CryptoExchange() {
             </div>
           </div>
           <div className="mt-5 lg:mt-0">
-            <InputField disabled={true} value={buyItem} />
+            <InputText disabled={true} value={buyItem} />
           </div>
         </div>
         <div className="grid justify-center">
