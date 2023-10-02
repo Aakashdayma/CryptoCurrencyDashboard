@@ -1,6 +1,6 @@
 # CryptoDashboard.
 
-Welcome to CryptoDashboard!
+## Welcome to CryptoDashboard!
 
 Crypto Currency Dashboard is your go-to web application for staying up-to-date with the world of cryptocurrencies. It's a comprehensive platform that offers real-time insights and in-depth analysis of a wide range of cryptocurrencies. With Crypto Currency Dashboard, you can effortlessly monitor your favorite digital assets' current prices, market capitalization, trading volumes, and historical trends.
 
