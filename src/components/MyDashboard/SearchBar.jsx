@@ -4,41 +4,54 @@ import { updateCryptoName } from "../../reduxStore/cryptoCoinData";
 import { updateDataDuration, updateDays } from "../../reduxStore/daysData";
 import { updateActiveButton } from "../../reduxStore/defaultState";
 
-function SearchBar() {
+function Search() {
+  // Refs and State
   const searchRef = useRef();
-  const [searchBar, setSearchBar] = useState();
+  const [Search, setSearch] = useState();
   const { coins } = useSelector((state) => state.coins);
 
+  // Extracting Data
   const coinName = coins.map((coin) => coin.id);
   const coinID = coins.map((coin) => coin.symbol);
   const coinAltName = coins.map((coin) => coin.name);
 
+  // Redux Dispatch
   const dispatch = useDispatch();
+
+  // Event Handlers
   const handleValueChange = (e) => {
-    setSearchBar(e.target.value.toLowerCase());
+    setSearch(e.target.value.toLowerCase());
   };
+
   const handleSearch = () => {
-    // Check if searchBar is defined and not empty
-    if (searchBar) {
-      const searchedCoins = coinName.filter((item) => item.includes(searchBar));
-      const searchedID = coinID.filter((item) => item.includes(searchBar));
-      const searchedName = searchBar.charAt(0).toUpperCase() + searchBar.slice(1);
+    if (Search) {
+      const searchedCoins = coinName.filter((item) => item.includes(Search));
+      const searchedID = coinID.filter((item) => item.includes(Search));
+      const searchedName =
+        Search.charAt(0).toUpperCase() + Search.slice(1);
       const searchedCoinName = coinAltName.filter((item) =>
         item.includes(searchedName)
       );
-  
-      if (searchedCoins.length > 0 || searchedID.length > 0 || searchedCoinName.length > 0) {
-        if (searchedCoins[0] === searchBar) {
+
+      if (
+        searchedCoins.length > 0 ||
+        searchedID.length > 0 ||
+        searchedCoinName.length > 0
+      ) {
+        if (searchedCoins[0] === Search) {
           dispatch(updateCryptoName(searchedCoins[0]));
-          console.log("entering first");
-        } else if (searchedID[0] === searchBar) {
+          console.log("Entering first");
+        } else if (searchedID[0] === Search) {
           dispatch(
             updateCryptoName(
-              coinName[coins.map((id) => id.symbol).indexOf(searchBar)]
+              coinName[coins.map((id) => id.symbol).indexOf(Search)]
             )
           );
-          console.log("entering second");
-        } else if (searchedCoinName.length > 0 && searchedCoinName[0].includes(searchedName)) {
+          console.log("Entering second");
+        } else if (
+          searchedCoinName.length > 0 &&
+          searchedCoinName[0].includes(searchedName)
+        ) {
           dispatch(
             updateCryptoName(
               coinName[coins.map((id) => id.name).indexOf(searchedCoinName[0])]
@@ -46,17 +59,18 @@ function SearchBar() {
           );
         } else {
           dispatch(updateCryptoName(searchedCoins[0]));
-          console.log("entering last");
+          console.log("Entering last");
         }
         dispatch(updateDays(1));
         dispatch(updateDataDuration("hourly"));
         dispatch(updateActiveButton("1D"));
       }
     }
-  
-    // to reset the search input field
+    // Reset the search input field
     searchRef.current.value = "";
   };
+
+  // JSX
   return (
     <div className="flex justify-center bg-white">
       <div className="w-full">
@@ -97,4 +111,5 @@ function SearchBar() {
   );
 }
 
-export default SearchBar;
+export default Search;
+
