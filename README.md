@@ -2,18 +2,19 @@
 
 Welcome to CryptoDashboard!
 
-CryptoDashboard is your go-to web application for staying up-to-date with the world of cryptocurrencies. It's a comprehensive platform that offers real-time insights and in-depth analysis of a wide range of cryptocurrencies. With CryptoDashboard, you can effortlessly monitor current prices, market capitalization, trading volumes, and historical trends of your favorite digital assets.
+Crypto Currency Dashboard is your go-to web application for staying up-to-date with the world of cryptocurrencies. It's a comprehensive platform that offers real-time insights and in-depth analysis of a wide range of cryptocurrencies. With Crypto Currency Dashboard, you can effortlessly monitor your favorite digital assets' current prices, market capitalization, trading volumes, and historical trends.
 
 ## Key Features
-*Real-time Data*: Access up-to-the-minute cryptocurrency prices and market performance.
 
-*Cryptocurrency Portfolio*: Manage your cryptocurrency investments efficiently with our portfolio tracking feature.
+**Real-time Information**: Access up-to-the-minute cryptocurrency prices and market performance.
 
-*Historical Charts*: Dive into historical price charts and perform trend analysis over different time periods.
+**Recent Trends & History Charts**: Dive into historical price charts and perform trend analysis over different time periods.
 
-*News Feed*: Stay informed about the latest developments and news in the dynamic cryptocurrency space.
+**Cryptocurrency Portfolio**: Manage your cryptocurrency investments efficiently with our portfolio tracking feature.
 
-*User-Friendly Interface*: Experience seamless navigation and data visualization through our clean and intuitive user interface.
+**user-oriented Interface**: Experience seamless navigation and data visualization through our clean and intuitive user interface.
+
+**Crypto Exchange Rate tool** - Crypto exchange rate calculator helps convert prices between two currencies in real-time.
 
 ## Powered by Cutting-Edge Technologies
 CryptoDashboard leverages the following technologies to provide you with a top-notch experience:
@@ -35,22 +36,42 @@ To run CryptoDashboard locally, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
-   git clone 
+   git clone https://github.com/Aakashdayma/CryptoCurrencyDashboard.git
 
-   ## Deployed Link
+## Deployed Link
 
-You can access the CryptoDashboard web application by following this link:
+Access the CryptoDashboard web application by clicking the link below: -
 
+https://aakashdayma.github.io/CryptoCurrencyDashboard/
 
+## For development -
+If you're a developer and want to contribute or explore the codebase, here's what you need to do:
+Run the following command in your terminal to install all the necessary packages:
+ "npm install".
 
-## For developers 👩🏼‍💻 🧑🏼‍💻
+Technologies Utilized -
 
-Run "npm install" in the terminal to install all the packages needed for this project.
+HTML: Used for structuring the web app.
 
+CSS: Enhances the user interface for a delightful user experience.
 
+React.js: Powers the frontend for dynamic content.
 
+Node.js: Drives the backend functionality.
 
+Express.js: Provides a solid framework for Node.js.
+
+MongoDB Cloud Atlas: Ensures secure and scalable database storage.
+
+Mongoose: An ODM library for MongoDB for seamless data interaction.
+
+Bootstrap: Adds a touch of style and aesthetics to the web pages.
+
+Tailwind CSS : A utility-first CSS framework for rapidly building custom user interfaces.
+
+## Developed-By (Aakash Dayma)
+1. [Linkedin](https://www.linkedin.com/in/aakash-dayma-9990/).
+2. [Youtube](https://www.youtube.com/channel/UCByAARH9-KcXp2cejPw4ljg)
 
 Copyright (c) 2023-2024 (Knowledge is Light) / AlmaBetter All Right Reserved.
 
